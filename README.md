@@ -76,7 +76,23 @@ And decidet to use meterpreter_reverse_tcp for this exercise
 
 ### Setting Up Metasploit Handler
 
-Instructions on setting up Metasploit Handler to listen for the reverse shell connection. Detailed instructions [here](attack-scripts/metasploit-handler.md).
+Opened Metasploit 
+
+![image](https://github.com/user-attachments/assets/23c792eb-189b-43f5-b440-99ff1676c3ac)
+Set up a reverse tcp, and changed the host to the attacking host and .... let it rip 
+![image](https://github.com/user-attachments/assets/b5d4c90c-3210-4f4e-9e0d-99cbc3e59a26)
+
+![image](https://github.com/user-attachments/assets/13f881a3-80c5-4844-9c37-87b388d5c635)
+
+Then run to the windows machine to install the malware
+![image](https://github.com/user-attachments/assets/b72bcd45-d5ba-42e1-9411-b34db6c8bd1e)
+
+Then check if it's actually working
+![image](https://github.com/user-attachments/assets/54cd4831-c1e1-443c-a65f-b839e81bc46a)
+
+
+
+
 
 ## Telemetry Analysis
 
