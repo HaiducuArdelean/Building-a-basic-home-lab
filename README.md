@@ -1,7 +1,6 @@
-# PROJECTNAME
+# Basic Home Lab setup
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
 The Basic Home Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
 
@@ -46,7 +45,7 @@ I've asigned a new network adapter to both VM's so they can talk to each othre
 Took notes of each machines ip address
 ![image](https://github.com/user-attachments/assets/28175b72-a46b-4681-96c9-e440d769e413)
 
-And make sure they can talk to each other 
+And made sure they can talk to each other 
 ![image](https://github.com/user-attachments/assets/7b6bf5ff-e92a-4f08-95be-87707648944b)
 
 
@@ -56,21 +55,23 @@ And make sure they can talk to each other
 ### Nmap Scan
 
 Ran a Nmap scan to check for open ports on the Kali machine
-![image](https://github.com/user-attachments/assets/4c2174a6-2a7a-4d86-9b1f-b315ab6ef402)
+
+![image](https://github.com/user-attachments/assets/cf06cef7-7778-441a-8c75-856fc1bdc610)
 
 
 ### Creating and Deploying Malware
 
 For this exercise I used msfvenom
+
 ![image](https://github.com/user-attachments/assets/a27f064c-bab8-4f86-881d-6352dbc2bf90)
 
 Looked at the available payloads 
+
 ![image](https://github.com/user-attachments/assets/d00d6daf-004b-46e9-afff-a19a4d143b1b)
 
 And decidet to use meterpreter_reverse_tcp for this exercise
 
 ![image](https://github.com/user-attachments/assets/4c785ba3-6609-436d-990d-a8e03608bc0c)
-
 
 
 
@@ -88,24 +89,26 @@ Then run to the windows machine to install the malware
 ![image](https://github.com/user-attachments/assets/b72bcd45-d5ba-42e1-9411-b34db6c8bd1e)
 
 Then check if it's actually working
-![image](https://github.com/user-attachments/assets/54cd4831-c1e1-443c-a65f-b839e81bc46a)
 
+![image](https://github.com/user-attachments/assets/cff90ba8-970a-4583-a280-3bb30f133072)
 
-
-
-
-## Telemetry Analysis
 
 ### Splunk Setup
 
-Steps to set up Splunk and configure it to ingest Sysmon logs. Detailed instructions [here](telemetry-analysis/splunk-setup.md).
+Steps to set up Splunk and configure it to ingest Sysmon logs, using MyDFIR's help.
 
 ### Analyzing Generated Telemetry
 
-Guide on how to analyze the telemetry data generated from the attack scenarios. Detailed instructions [here](telemetry-analysis/telemetry-analysis.md).
+Next step looking at Splunk to see if we can actually read some commands that I've put in Kali. 
+I've isolated the event by looking at the EventCode and taking the process_guid id and putting that in my search bar. 
+After I got the results I've aranged them in a table to show me the ParentImage and the CommandLine
+
+![image](https://github.com/user-attachments/assets/292024a2-6542-438a-85fe-b193fc525904)
 
 
 
+I know this is an easy set up, but it took me a few tries to get it right. 
 
 I would like to give a big thanks to MyDFIR on YouTube for helping me go through this 
 https://www.youtube.com/watch?v=-8X7Ay4YCoA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=6&ab_channel=MyDFIR
+He's got a more detailed step by step process. 
